@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ### Initialize instance
 
-    errors_container = ErrorMessagesContainer::ErrorMessages.new('Base application errors')
+    errors_container = ErrorMessagesContainer::ErrorMessages.new(base_name: 'Base application errors')
 
 ### Work with groups
 
@@ -52,7 +52,7 @@ Add multiple messages
 
 ### Reading errors group info
 
-For example you can use this on you view
+For example you can use this in you view
 
     %ul
       - @errors_container.all_messages.each do |group_name, messages|
